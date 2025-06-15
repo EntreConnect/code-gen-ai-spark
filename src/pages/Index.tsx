@@ -11,7 +11,7 @@ const Index = () => {
   const [messages, setMessages] = useState([
     {
       id: 1,
-      type: 'assistant',
+      type: 'assistant' as const,
       content: 'Hello! I\'m your AI coding assistant. How can I help you with your code today?',
       timestamp: new Date()
     }
