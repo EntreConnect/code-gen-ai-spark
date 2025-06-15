@@ -1,13 +1,6 @@
-
 import React from 'react';
 import { Settings, MessageSquare, Code2, Menu, X } from 'lucide-react';
-
-interface Message {
-  id: number;
-  type: 'user' | 'assistant';
-  content: string;
-  timestamp: Date;
-}
+import { Message } from '../types/Message';
 
 interface SidebarProps {
   isOpen: boolean;

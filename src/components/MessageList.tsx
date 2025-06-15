@@ -1,14 +1,7 @@
-
 import React from 'react';
 import MessageBubble from './MessageBubble';
 import LoadingMessage from './LoadingMessage';
-
-interface Message {
-  id: number;
-  type: 'user' | 'assistant';
-  content: string;
-  timestamp: Date;
-}
+import { Message } from '../types/Message';
 
 interface MessageListProps {
   messages: Message[];

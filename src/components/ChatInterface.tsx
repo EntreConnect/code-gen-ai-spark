@@ -1,14 +1,7 @@
-
 import React, { useState, useRef, useEffect } from 'react';
 import MessageList from './MessageList';
 import UserInput from './UserInput';
-
-interface Message {
-  id: number;
-  type: 'user' | 'assistant';
-  content: string;
-  timestamp: Date;
-}
+import { Message } from '../types/Message';
 
 interface ChatInterfaceProps {
   activeTab: 'prompt' | 'code';

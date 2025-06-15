@@ -1,14 +1,7 @@
-
 import React, { useState } from 'react';
 import { Copy, RefreshCw, User, Bot, Check } from 'lucide-react';
 import CodeBlock from './CodeBlock';
-
-interface Message {
-  id: number;
-  type: 'user' | 'assistant';
-  content: string;
-  timestamp: Date;
-}
+import { Message } from '../types/Message';
 
 interface MessageBubbleProps {
   message: Message;

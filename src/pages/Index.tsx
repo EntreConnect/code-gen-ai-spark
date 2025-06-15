@@ -4,11 +4,12 @@ import Sidebar from '../components/Sidebar';
 import Header from '../components/Header';
 import ChatInterface from '../components/ChatInterface';
 import TabNavigation from '../components/TabNavigation';
+import { Message } from '../types/Message';
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState<'prompt' | 'code'>('prompt');
   const [sidebarOpen, setSidebarOpen] = useState(true);
-  const [messages, setMessages] = useState([
+  const [messages, setMessages] = useState<Message[]>([
     {
       id: 1,
       type: 'assistant' as const,
@@ -18,7 +19,7 @@ const Index = () => {
   ]);
 
   const addMessage = (content: string, type: 'user' | 'assistant') => {
-    const newMessage = {
+    const newMessage: Message = {
       id: Date.now(),
       type,
       content,
